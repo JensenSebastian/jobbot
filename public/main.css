@@ -1,0 +1,144 @@
+:root {
+  --light-shades-clr: #f1f8f7;
+  --light-accent-clr: #94b1ef;
+  --main-brand-clr: #d9484b;
+  --dark-accent-clr: #f4b616;
+  --dark-shades-clr: #2d3b69;
+}
+
+* {
+  margin: 0px;
+  border: 0px #000 none;
+  padding: 0px;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: var(--light-shades-clr);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background: var(--light-accent-clr);
+  border-bottom: 2px solid var(--dark-accent-clr);
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+footer {
+  background: var(--dark-shades-clr);
+  border-top: 2px solid var(--light-accent-clr);
+  color: var(--light-shades-clr);
+  display: flex;
+  flex-shrink: 0;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+footer a {
+  color: var(--light-shades-clr);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--light-accent-clr);
+  text-decoration: underline;
+}
+
+footer a:focus {
+  color: var(--light-accent-clr);
+  text-decoration: underline;
+}
+
+h1 {
+  color: var(--main-brand-clr);
+  font-size: 2em;
+  font-family: "Coda Caption", sans-serif;
+  margin: 1em;
+  font-style: italic;
+  -webkit-text-stroke: 1px var(--dark-accent-clr);
+  text-shadow: 2px 2px var(--dark-shades-clr);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+p {
+  max-width: 50ch;
+  line-height: 1.4;
+}
+
+p + p {
+  text-indent: 4ch;
+}
+
+li {
+  list-style: none;
+}
+
+.hori-menu-link {
+  color: var(--dark-shades-clr);
+  display: none;
+}
+
+.hori-menu-link:hover {
+  color: var(--dark-accent-clr);
+}
+
+.hori-menu-link:focus {
+  color: var(--dark-accent-clr);
+}
+
+.burger-menu-link {
+  display: none;
+}
+
+.burger-menu-btn {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .hori-menu-link {
+    display: inline-block;
+    margin: 1em;
+  }
+  .burger-menu-link {
+    display: none;
+  }
+  .burger-menu-btn {
+    display: none;
+  }
+}
