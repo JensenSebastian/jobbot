@@ -30,7 +30,8 @@ main {
 header {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-content: center;
   background: var(--light-accent-clr);
   border-bottom: 2px solid var(--dark-accent-clr);
 }
@@ -38,8 +39,8 @@ header {
 nav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 footer {
@@ -112,6 +113,7 @@ li {
 .hori-menu-link {
   color: var(--dark-shades-clr);
   display: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hori-menu-link:hover {
@@ -128,6 +130,74 @@ li {
 
 .burger-menu-btn {
   display: inline-block;
+}
+
+#foretag {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  color: var(--dark-shades-clr);
+}
+
+#foretag > h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.feature-card {
+  background: var(--light-accent-clr);
+  margin: 8px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex: 0 0 256px;
+  height: 256px;
+  transition: background 0.5s, color 0.5s;
+}
+
+.feature-card:hover {
+  background: var(--main-brand-clr);
+  color: var(--dark-accent-clr);
+}
+
+form {
+  background-color: var(--dark-shades-clr);
+  color: var(--light-shades-clr);
+  padding: 4px;
+  margin: 0px;
+}
+
+label {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 142px;
+  border: 1px solid var(--dark-shades-clr);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  display: block;
+  background: var(--main-brand-clr);
+  border: 1px solid var(--dark-shades-clr);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--light-shades-clr);
+  padding: 4px 8px;
+  margin-top: 4px;
 }
 
 @media (min-width: 600px) {
